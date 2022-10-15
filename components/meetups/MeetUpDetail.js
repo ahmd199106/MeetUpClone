@@ -1,12 +1,13 @@
-import classes from './MeetupDetail.module.css';
+// import classes from '../meetups/';
 
-function MeetupDetail(props) {
+function MeetupDetail({ meetup }) {
+  console.log(meetup, 'meetup');
   return (
-    <section className={classes.detail}>
-      <img src={props.image} alt={props.title} />
-      <h1>{props.title}</h1>
-      <address>{props.address}</address>
-      <p>{props.description}</p>
+    <section>
+      <img src={meetup.image} alt={meetup.title} />
+      <h1>{meetup.title}</h1>
+      <address>{meetup.address}</address>
+      <p>{meetup.description}</p>
     </section>
   );
 }
